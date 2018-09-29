@@ -1,0 +1,527 @@
+Species,mass,bmr,N,zona,origen
+Crypturellus soui,220.8,0.77,1,Tropical,This Study
+Struthio camelus,100000,63.05,N/A,Tropical,McKechnie & Wolf 2004
+Apteryx australis ,2380,4.03,N/A,Temperate,McKechnie & Wolf 2004
+Callipepla gambelii,126.1,0.76,N/A,Temperate,McKechnie & Wolf 2004
+Colinus virginianus,258,1.32,5,Temperate,UCR
+Odontophorus stellatus §,296.5,1.15,1,Tropical,This Study
+Bonasa umbellus,644,2.38,N/A,Temperate,McKechnie & Wolf 2004
+Dendragapus obscurus,1131,4.96,N/A,Temperate,McKechnie & Wolf 2004
+Alectoris chukar,525.7,1.22,5,Temperate,UCR
+Coturnix coturnix,97,0.89,N/A,Temperate,Wiersma et al. 2007
+Coturnix pectoralis,95.8,0.64,N/A,Temperate,McKechnie & Wolf 2004
+Excalfactoria chinensis,44.9,0.37,N/A,Tropical,McKechnie & Wolf 2004
+Excalfactoria chinensis,42.4,0.42,7,Tropical,UCR
+Gallus gallus,1196,3.02,20,Temperate,UCR
+Gallus gallus,2710,6,N/A,Tropical,McKechnie & Wolf 2004
+Pygoscelis adeliae,3970,12.23,N/A,Temperate,McKechnie & Wolf 2004
+Spheniscus humboldti,3870,9.49,N/A,Temperate,McKechnie & Wolf 2004
+Phoebastria immutabilis *,2522,7.46,N/A,Temperate,McKechnie & Wolf 2004
+Diomedea exulans,8130,20.31,N/A,Temperate,McKechnie & Wolf 2004
+Thalassarche chrysostoma *,3753,8.51,N/A,Temperate,McKechnie & Wolf 2004
+Macronectes giganteus,4780,13.36,N/A,Temperate,McKechnie & Wolf 2004
+Phalacrocorax auritus,1330,5.49,N/A,Temperate,McKechnie & Wolf 2004
+Anhinga rufa §,1040,3.19,N/A,Tropical,McKechnie & Wolf 2004
+Accipiter nisus,135,0.95,N/A,Temperate,Wiersma et al. 2007
+Accipiter striatus,173.4,0.52,1,Tropical,This Study
+Buteo lineatus,658,2.11,N/A,Temperate,McKechnie & Wolf 2004
+Buteo lineatus,609,2.8,6,Temperate,UCR
+Buteo jamaicensis,1140.9,4.33,6,Temperate,UCR
+Turnix suscitator,58.1,0.39,N/A,Tropical,McKechnie & Wolf 2004
+Haematopus ostralegus,554,2.91,N/A,Temperate,McKechnie & Wolf 2004
+Pluvialis squatarola ,226,1.78,N/A,Temperate,McKechnie & Wolf 2004
+Charadrius dubius,36,0.42,N/A,Temperate,Wiersma et al. 2007
+Jacana jacana,107,1.01,N/A,Tropical,Wiersma et al. 2007
+Thinocorus rumicivorus,55.5,0.31,N/A,Temperate,McKechnie & Wolf 2004
+Scolopax minor,156.7,1.07,N/A,Temperate,McKechnie & Wolf 2004
+Arenaria interpres,90,0.92,N/A,Temperate,McKechnie & Wolf 2004
+Calidris tenuirostris,198.2,2.01,N/A,Temperate,White et al. 2007
+Calidris canutus ,130,0.88,N/A,Temperate,McKechnie & Wolf 2004
+Larus argentatus,1000,4.8,N/A,Temperate,McKechnie & Wolf 2004
+Uria lomvia,989,6.8,N/A,Temperate,McKechnie & Wolf 2004
+Uria aalge,956,6.8,N/A,Temperate,McKechnie & Wolf 2004
+Pterocles orientalis,386.4,1.95,N/A,Temperate,McKechnie & Wolf 2004
+Columba livia,316.3,2.12,8,Temperate,UCR
+Columba leucomela,456,2.44,N/A,Temperate,McKechnie & Wolf 2004
+Streptopelia capicola,151.9,0.91,6,Temperate,UCR
+Oena capensis,56,0.4,2,Tropical,UCR
+Chalcophaps indica,124,0.79,N/A,Tropical,McKechnie & Wolf 2004
+Phaps chalcoptera,304,1.53,N/A,Temperate,McKechnie & Wolf 2004
+Phaps elegans §,190,1.24,N/A,Temperate,McKechnie & Wolf 2004
+Phaps histrionica §,257,1.3,N/A,Temperate,McKechnie & Wolf 2004
+Ocyphaps lophotes,187,1.09,N/A,Temperate,McKechnie & Wolf 2004
+Geophaps plumifera,81,0.39,N/A,Temperate,McKechnie & Wolf 2004
+Geophaps smithii §,198,0.87,N/A,Temperate,McKechnie & Wolf 2004
+Leucosarcia melanoleuca,445,1.69,N/A,Temperate,McKechnie & Wolf 2004
+Geopelia cuneata,39,0.27,N/A,Temperate,McKechnie & Wolf 2004
+Geopelia cuneata,37.5,0.28,6,Temperate,UCR
+Geopelia placida,52,0.36,N/A,Temperate,McKechnie & Wolf 2004
+Zenaida macroura,121.7,0.79,N/A,Temperate,Wiersma et al. 2007
+Columbina inca,40.5,0.25,N/A,Temperate,McKechnie & Wolf 2004
+Columbina talpacoti,45.7,0.41,N/A,Tropical,Wiersma et al. 2007
+Leptotila verreauxi,131,0.89,N/A,Tropical,Wiersma et al. 2007
+Leptotila rufaxilla,150.6,0.69,3,Tropical,This Study
+Geotrygon frenata *,322.4,0.88,2,Tropical,This Study
+Geotrygon montana †,117.9,0.82,16,Tropical,This Study
+Ptilinopus superbus,120.4,0.76,N/A,Tropical,McKechnie & Wolf 2004
+Ptilinopus melanospilus,98,0.49,N/A,Tropical,McKechnie & Wolf 2004
+Geococcyx californianus,284.7,1.46,N/A,Temperate,McKechnie & Wolf 2004
+Cuculus canorus,111.6,0.84,N/A,Temperate,Wiersma et al. 2007
+Tyto alba,456.1,2.61,6,Temperate,UCR
+Megascops asio,166,0.59,N/A,Temperate,McKechnie & Wolf 2004
+Megascops kennicottii,147.3,1.27,6,Temperate,UCR
+Megascops trichopsis,120,0.45,N/A,Temperate,McKechnie & Wolf 2004
+Bubo scandiacus,2026,4.21,N/A,Temperate,McKechnie & Wolf 2004
+Bubo virginianus,1450,5.23,N/A,Temperate,McKechnie & Wolf 2004
+Bubo virginianus,1195.4,4.39,6,Temperate,UCR
+Strix occidentalis,571,2.67,N/A,Temperate,McKechnie & Wolf 2004
+Glaucidium jardinii,60.6,0.68,5,Tropical,This Study
+Glaucidium brasilianum,60.6,0.43,1,Tropical,This Study
+Athene cunicularia,159.7,1.02,6,Temperate,UCR
+Asio otus,252,0.95,N/A,Temperate,McKechnie & Wolf 2004
+Podargus strigoides,380.3,1.03,N/A,Temperate,McKechnie & Wolf 2004
+Chordeiles minor,72,0.44,N/A,Temperate,McKechnie & Wolf 2004
+Uropsalis segmentata,34.7,0.54,1,Tropical,This Study
+Uropsalis lyra,77.5,0.52,1,Tropical,This Study
+Streptoprocne rutila,16.1,0.24,1,Tropical,This Study
+Apus apus,44.9,0.44,N/A,Temperate,Wiersma et al. 2007
+Eutoxeres condamini,10,0.22,6,Tropical,This Study
+Glaucis hirsutus,6.9,0.18,1,Tropical,This Study
+Threnetes leucurus,9.4,0.15,3,Tropical,This Study
+Phaethornis guy,5.9,0.13,8,Tropical,This Study
+Phaethornis hispidus,4.9,0.14,5,Tropical,This Study
+Phaethornis superciliosus †,5.2,0.14,3,Tropical,This Study
+Phaethornis koepckeae,5.4,0.13,2,Tropical,This Study
+Doryfera ludovicae,5.9,0.16,5,Tropical,This Study
+Colibri thalassinus,6.2,0.16,1,Tropical,This Study
+Colibri coruscans †,8.4,0.15,25,Tropical,This Study
+Thalurania furcata,3.8,0.13,1,Tropical,This Study
+Taphrospilus hypostictus,7.5,0.13,4,Tropical,This Study
+Adelomyia melanogenys,3.5,0.08,6,Tropical,This Study
+Phlogophilus harterti *,2.8,0.15,2,Tropical,This Study
+Heliodoxa leadbeateri,7.5,0.19,21,Tropical,This Study
+Boissonneaua matthewsii,7.5,0.2,5,Tropical,This Study
+Aglaeactis cupripennis,7.2,0.12,9,Tropical,This Study
+Aglaeactis castelnaudii,6.9,0.1,1,Tropical,This Study
+Oreotrochilus estella,8.4,0.19,N/A,Tropical,McKechnie & Wolf 2004
+Lafresnaya lafresnayi,5.7,0.14,1,Tropical,This Study
+Coeligena coeligena,7.1,0.19,6,Tropical,This Study
+Coeligena violifer,7.8,0.14,23,Tropical,This Study
+Pterophanes cyanopterus,10.8,0.11,1,Tropical,This Study
+Sephanoides sephaniodes,5.7,0.1,N/A,Temperate,McKechnie & Wolf 2004
+Heliangelus amethysticollis,5.8,0.15,14,Tropical,This Study
+Haplophaedia aureliae,4.8,0.14,3,Tropical,This Study
+Ocreatus underwoodii,3.3,0.08,2,Tropical,This Study
+Ramphomicron microrhynchum,3.9,0.08,1,Tropical,This Study
+Metallura tyrianthina,3.8,0.1,17,Tropical,This Study
+Chalcostigma ruficeps,3.6,0.15,7,Tropical,This Study
+Schistes geoffroyi,4.8,0.18,3,Tropical,This Study
+Chaetocercus mulsant,3.6,0.07,1,Tropical,This Study
+Colius striatus,51,0.24,N/A,Tropical,McKechnie & Wolf 2004
+Colius colius,35.1,0.18,N/A,Temperate,McKechnie & Wolf 2004
+Trogon personatus,59,0.83,1,Tropical,This Study
+Dacelo novaeguineae,336,1.12,N/A,Temperate,White et al. 2007
+Chloroceryle aenea,11.8,0.17,N/A,Tropical,Wiersma et al. 2007
+Todus mexicanus,6.1,0.11,N/A,Tropical,White et al. 2007
+Momotus momota,123.1,0.52,2,Tropical,This Study
+Momotus momota,102.4,0.49,N/A,Tropical,Wiersma et al. 2007
+Momotus aequatorialis *,158.5,0.58,1,Tropical,This Study
+Baryphthengus martii,127.1,0.55,3,Tropical,This Study
+Merops viridis,33.8,0.3,N/A,Tropical,McKechnie & Wolf 2004
+Phoeniculus purpureus *,74.1,0.17,N/A,Tropical,McKechnie & Wolf 2004
+Galbula cyanescens,24,0.23,2,Tropical,This Study
+Notharchus macrorhynchos,43.2,0.32,N/A,Tropical,Wiersma et al. 2007
+Bucco macrodactylus,23.7,0.18,1,Tropical,This Study
+Malacoptila semicincta,47.1,0.33,1,Tropical,This Study
+Malacoptila fulvogularis,49.6,0.53,2,Tropical,This Study
+Micromonacha lanceolata §,21.9,0.36,1,Tropical,This Study
+Monasa nigrifrons §,86,0.46,5,Tropical,This Study
+Monasa morphoeus §,67.5,0.45,2,Tropical,This Study
+Aulacorhynchus prasinus,137,0.98,2,Tropical,This Study
+Selenidera reinwardtii,173.6,1.2,1,Tropical,This Study
+Andigena hypoglauca,282.9,1.71,1,Tropical,This Study
+Picumnus rufiventris,21.9,0.26,2,Tropical,This Study
+Melanerpes formicivorus,73.1,0.74,N/A,Temperate,Wiersma et al. 2007
+Melanerpes rubricapillus *,48.7,0.54,N/A,Tropical,Wiersma et al. 2007
+Picoides pubescens,21.7,0.38,N/A,Temperate,McKechnie & Wolf 2004
+Picoides pubescens,24.1,0.41,N/A,Temperate,White et al. 2007
+Veniliornis nigriceps,43.4,0.49,3,Tropical,This Study
+Colaptes rivolii,81.5,0.93,3,Tropical,This Study
+Celeus loricatus,83.1,0.69,N/A,Tropical,Wiersma et al. 2007
+Celeus spectabilis,113,0.98,1,Tropical,This Study
+Micrastur ruficollis *,304.1,0.72,1,Tropical,This Study
+Micrastur gilvicollis,170.5,1.04,1,Tropical,This Study
+Falco sparverius,111.6,1.13,6,Temperate,UCR
+Calyptorhynchus banksii,535.5,2.97,N/A,Temperate,White et al. 2007
+Eolophus roseicapilla *,268.7,1.25,N/A,Temperate,McKechnie & Wolf 2004
+Cacatua tenuirostris *,549.9,3.17,N/A,Temperate,McKechnie & Wolf 2004
+Cacatua galerita § ,776.1,3.42,N/A,Temperate,McKechnie & Wolf 2004
+Nymphicus hollandicus *,96.8,0.66,6,Tropical,UCR
+Trichoglossus haematodus,137.1,1.19,N/A,Tropical,White et al. 2007
+Barnardius zonarius,131.8,0.79,N/A,Temperate,White et al. 2007
+Neopsephotus bourkii,35,0.29,1,Temperate,UCR
+Neophema petrophila,48.4,0.63,N/A,Temperate,White et al. 2007
+Melopsittacus undulatus,42.8,0.36,6,Temperate,UCR
+Agapornis roseicollis §,48.3,0.36,6,Temperate,UCR
+Bolborhynchus orbygnesius *,46.4,0.38,3,Tropical,This Study
+Brotogeris jugularis,63.5,0.58,N/A,Tropical,Wiersma et al. 2007
+Asthenes helleri *,15,0.19,4,Tropical,This Study
+Synallaxis azarae,13.6,0.23,9,Tropical,This Study
+Synallaxis cabanisi *,19.3,0.3,3,Tropical,This Study
+Cranioleuca marcapatae,19,0.28,6,Tropical,This Study
+Premnoplex brunnescens,15.7,0.32,17,Tropical,This Study
+Margarornis squamiger,16.7,0.27,15,Tropical,This Study
+Pseudocolaptes boissonneautii,42.9,0.55,1,Tropical,This Study
+Anabacerthia striaticollis,24.2,0.35,8,Tropical,This Study
+Simoxenops ucayalae,51.2,0.61,1,Tropical,This Study
+Ancistrops strigilatus,36,0.22,1,Tropical,This Study
+Hyloctistes subulatus,30.2,0.49,1,Tropical,This Study
+Philydor erythrocercum *,38.2,0.42,1,Tropical,This Study
+Anabazenops dorsalis,39.2,0.45,1,Tropical,This Study
+Thripadectes melanorhynchus *,47.5,0.54,14,Tropical,This Study
+Thripadectes holostictus *,42.5,0.38,5,Tropical,This Study
+Automolus ochrolaemus,36.7,0.63,1,Tropical,This Study
+Automolus melanopezus,31.6,0.38,1,Tropical,This Study
+Automolus rufipileatus,36.2,0.46,5,Tropical,This Study
+Sclerurus mexicanus,28.8,0.44,3,Tropical,This Study
+Sclerurus caudacutus *,36.2,0.46,4,Tropical,This Study
+Lochmias nematura,30.5,0.34,3,Tropical,This Study
+Xenops minutus,12.7,0.18,1,Tropical,This Study
+Dendrocincla tyrannina,58.3,0.53,2,Tropical,This Study
+Dendrocincla fuliginosa,33.1,0.37,9,Tropical,This Study
+Dendrocincla merula,52.8,0.62,11,Tropical,This Study
+Sittasomus griseicapillus,14.4,0.27,1,Tropical,This Study
+Glyphorynchus spirurus,15.5,0.25,21,Tropical,This Study
+Dendrocolaptes picumnus,80.2,0.72,1,Tropical,This Study
+Xiphorhynchus elegans,41.4,0.51,9,Tropical,This Study
+Xiphorhynchus guttatus,60.1,0.52,7,Tropical,This Study
+Xiphorhynchus triangularis,44.1,0.6,7,Tropical,This Study
+Lepidocolaptes lacrymiger,32.6,0.22,1,Tropical,This Study
+Thamnophilus doliatus,26.2,0.29,N/A,Tropical,Wiersma et al. 2007
+Thamnophilus palliatus,27.8,0.49,1,Tropical,This Study
+Thamnophilus atrinucha,20.5,0.28,N/A,Tropical,Wiersma et al. 2007
+Thamnophilus punctatus,21,0.34,N/A,Tropical,Wiersma et al. 2007
+Thamnomanes ardesiacus,19.3,0.27,9,Tropical,This Study
+Thamnomanes schistogynus,19.7,0.34,3,Tropical,This Study
+Epinecrophylla leucophthalma,9.4,0.19,8,Tropical,This Study
+Isleria hauxwelli,10.8,0.21,9,Tropical,This Study
+Myrmotherula axillaris,8.9,0.19,4,Tropical,This Study
+Myrmotherula schisticolor,8.3,0.25,2,Tropical,This Study
+Myrmotherula longipennis,9.6,0.22,1,Tropical,This Study
+Myrmotherula menetriesii,9.3,0.28,2,Tropical,This Study
+Drymophila caudata,12.2,0.14,1,Tropical,This Study
+Cercomacra tyrannina,15.4,0.19,N/A,Tropical,Wiersma et al. 2007
+Pyriglena leuconota,32.1,0.55,4,Tropical,This Study
+Myrmoborus leucophrys,19.8,0.33,1,Tropical,This Study
+Myrmoborus myotherinus,21.2,0.28,3,Tropical,This Study
+Hypocnemis subflava *,15.6,0.24,3,Tropical,This Study
+Percnostola lophotes,31.6,0.33,3,Tropical,This Study
+Schistocichla leucostigma,17.8,0.18,1,Tropical,This Study
+Myrmeciza longipes,27.4,0.33,N/A,Tropical,Wiersma et al. 2007
+Myrmeciza exsul,28.3,0.29,N/A,Tropical,Wiersma et al. 2007
+Myrmeciza hemimelaena,18,0.25,5,Tropical,This Study
+Myrmeciza goeldii,42.4,0.42,4,Tropical,This Study
+Gymnopithys bicolor *,27.7,0.33,N/A,Tropical,Wiersma et al. 2007
+Gymnopithys salvini,27.1,0.32,7,Tropical,This Study
+Rhegmatorhina melanosticta,42.2,0.41,1,Tropical,This Study
+Hylophylax naevioides,16.1,0.24,N/A,Tropical,Wiersma et al. 2007
+Hylophylax naevius,12.8,0.35,1,Tropical,This Study
+Willisornis poecilinotus,22.3,0.39,4,Tropical,This Study
+Phlegopsis nigromaculata,47.1,0.48,2,Tropical,This Study
+Formicarius analis,54.9,0.62,3,Tropical,This Study
+Formicarius rufipectus *,70.3,0.73,1,Tropical,This Study
+Grallaria guatimalensis,87,0.62,1,Tropical,This Study
+Grallaria rufula,33.8,0.52,1,Tropical,This Study
+Conopophaga peruviana,24.5,0.34,4,Tropical,This Study
+Conopophaga ardesiaca,27.5,0.39,15,Tropical,This Study
+Scytalopus atratus,21.5,0.38,4,Tropical,This Study
+Scytalopus parvirostris,17,0.36,3,Tropical,This Study
+Elaenia albiceps,16.8,0.19,3,Tropical,This Study
+Elaenia gigas,30.7,0.41,1,Tropical,This Study
+Elaenia obscura,13.9,0.14,1,Tropical,This Study
+Elaenia pallatangae,15.7,0.23,17,Tropical,This Study
+Camptostoma obsoletum,12.5,0.26,N/A,Tropical,Wiersma et al. 2007
+Mecocerculus leucophrys,13.9,0.15,3,Tropical,This Study
+Mecocerculus stictopterus *,10.9,0.22,1,Tropical,This Study
+Anairetes parulus,6.6,0.15,2,Tropical,This Study
+Corythopis torquatus,18.7,0.28,5,Tropical,This Study
+Zimmerius bolivianus,11,0.28,2,Tropical,This Study
+Pogonotriccus ophthalmicus,8.8,0.24,2,Tropical,This Study
+Mionectes striaticollis †,14.7,0.27,38,Tropical,This Study
+Mionectes olivaceus †,15.7,0.28,21,Tropical,This Study
+Mionectes oleagineus,11.4,0.18,7,Tropical,This Study
+Mionectes oleagineus,10.3,0.16,N/A,Tropical,Wiersma et al. 2007
+Mionectes macconnelli,11.4,0.16,14,Tropical,This Study
+Leptopogon amaurocephalus †,14.1,0.22,6,Tropical,This Study
+Leptopogon superciliaris,12.9,0.25,9,Tropical,This Study
+Hemitriccus granadensis *,8.2,0.14,2,Tropical,This Study
+Lophotriccus pileatus,8.2,0.19,2,Tropical,This Study
+Todirostrum cinereum,7.3,0.17,N/A,Tropical,Wiersma et al. 2007
+Cnipodectes subbrunneus,20.5,0.27,N/A,Tropical,Wiersma et al. 2007
+Rhynchocyclus olivaceus,21,0.3,N/A,Tropical,Wiersma et al. 2007
+Rhynchocyclus fulvipectus,26,0.39,3,Tropical,This Study
+Platyrinchus coronatus,10.8,0.16,2,Tropical,This Study
+Platyrinchus platyrhynchos,14,0.3,1,Tropical,This Study
+Pyrrhomyias cinnamomeus,10.7,0.2,4,Tropical,This Study
+Lathrotriccus euleri,9.3,0.21,1,Tropical,This Study
+Sayornis phoebe,21.6,0.34,N/A,Temperate,McKechnie & Wolf 2004
+Sayornis phoebe,21.6,0.34,N/A,Temperate,Wiersma et al. 2007
+Contopus sordidulus,12.5,0.56,1,Temperate,This Study
+Contopus virens,13.9,0.26,N/A,Temperate,Wiersma et al. 2007
+Empidonax virescens,12.3,0.18,N/A,Temperate,Wiersma et al. 2007
+Knipolegus aterrimus,34,0.31,1,Tropical,This Study
+Muscisaxicola fluviatilis,13.6,0.26,1,Tropical,This Study
+Myiotheretes fuscorufus *,29.2,0.52,1,Tropical,This Study
+Silvicultrix spodionota *,10.7,0.17,1,Tropical,This Study
+Silvicultrix pulchella,12,0.17,6,Tropical,This Study
+Ochthoeca rufipectoralis *,10.9,0.2,6,Tropical,This Study
+Legatus leucophaius,26.7,0.16,1,Tropical,This Study
+Myiozetetes similis,27.1,0.29,1,Tropical,This Study
+Myiodynastes maculatus,41,0.59,N/A,Tropical,Wiersma et al. 2007
+Tyrannus melancholicus,38,0.36,N/A,Tropical,Wiersma et al. 2007
+Tyrannus tyrannus,36.1,0.36,2,Temperate,This Study
+Myiarchus crinitus,33.9,0.38,N/A,Temperate,McKechnie & Wolf 2004
+Myiarchus crinitus,33.9,0.38,N/A,Temperate,Wiersma et al. 2007
+Ramphotrigon fuscicauda,17.4,0.28,1,Tropical,This Study
+Attila spadiceus,32.7,0.14,1,Tropical,This Study
+Pipreola intermedia,49.6,0.61,2,Tropical,This Study
+Pipreola arcuata,93,0.6,1,Tropical,This Study
+Rupicola peruvianus,246.5,1.08,3,Tropical,This Study
+Lipaugus vociferans,86.6,0.76,1,Tropical,This Study
+Machaeropterus pyrocephalus,10,0.24,2,Tropical,This Study
+Lepidothrix coronata,10.6,0.2,20,Tropical,This Study
+Lepidothrix coeruleocapilla,9.6,0.24,8,Tropical,This Study
+Manacus vitellinus,15.5,0.23,N/A,Tropical,McKechnie & Wolf 2004
+Chiroxiphia lanceolata *,18.4,0.34,N/A,Tropical,Wiersma et al. 2007
+Chiroxiphia boliviana,17,0.3,11,Tropical,This Study
+Xenopipo holochlora *,16,0.21,1,Tropical,This Study
+Pipra fasciicauda,16.4,0.26,38,Tropical,This Study
+Dixiphia mentalis,12.3,0.19,N/A,Tropical,White et al. 2007
+Dixiphia chloromeros *,16.2,0.29,20,Tropical,This Study
+Onychorhynchus coronatus,14,0.3,2,Tropical,This Study
+Myiobius villosus,14.7,0.3,1,Tropical,This Study
+Terenotriccus erythrurus,9.3,0.24,2,Tropical,This Study
+Gliciphila melanops,18.8,0.29,N/A,Temperate,McKechnie & Wolf 2004
+Acanthorhynchus tenuirostris,9.7,0.25,N/A,Temperate,McKechnie & Wolf 2004
+Lichmera indistincta,9,0.21,N/A,Temperate,McKechnie & Wolf 2004
+Phylidonyris novaehollandiae,17.3,0.32,N/A,Temperate,McKechnie & Wolf 2004
+Melithreptus lunatus,14.3,0.25,N/A,Temperate,McKechnie & Wolf 2004
+Gavicalis virescens,25,0.35,N/A,Temperate,McKechnie & Wolf 2004
+Lanius collurio,27,0.38,N/A,Temperate,Wiersma et al. 2007
+Lanius excubitor,61.8,0.56,N/A,Temperate,Wiersma et al. 2007
+Vireo olivaceus,16.2,0.24,N/A,Temperate,Wiersma et al. 2007
+Vireo flavoviridis,15.9,0.28,N/A,Tropical,Wiersma et al. 2007
+Oriolus oriolus,64.9,0.65,N/A,Temperate,Wiersma et al. 2007
+Cyanolyca viridicyanus,82.6,1.07,2,Tropical,This Study
+Pica pica,158.9,1.2,N/A,Temperate,McKechnie & Wolf 2004
+Pica nuttalli,151.9,1.47,N/A,Temperate,McKechnie & Wolf 2004
+Poecile atricapillus,10.3,0.25,N/A,Temperate,McKechnie & Wolf 2004
+Parus major,18.5,0.38,N/A,Temperate,White et al. 2007
+Alaemon alaudipes,37.7,0.43,N/A,Temperate,McKechnie & Wolf 2004
+Chersomanes albofasciata,25.7,0.34,N/A,Tropical,White et al. 2007
+Ammomanes deserti *,21.5,0.23,N/A,Temperate,White et al. 2007
+Eremopterix nigriceps,15.2,0.19,N/A,Temperate,White et al. 2007
+Calendulauda erythrochlamys *,27.3,0.41,N/A,Temperate,McKechnie & Wolf 2004
+Mirafra erythroptera,27.3,0.42,N/A,Tropical,White et al. 2007
+Lullula arborea,25.5,0.57,N/A,Temperate,Wiersma et al. 2007
+Alauda arvensis,31.7,0.72,N/A,Temperate,McKechnie & Wolf 2004
+Galerida cristata,31.2,0.37,N/A,Temperate,White et al. 2007
+Eremophila alpestris,26,0.45,N/A,Temperate,White et al. 2007
+Calandrella brachydactyla,24,0.41,N/A,Temperate,White et al. 2007
+Melanocorypha calandra,50.6,0.57,N/A,Temperate,White et al. 2007
+Eremalauda dunni,20.6,0.28,N/A,Temperate,McKechnie & Wolf 2004
+Alaudala rufescens,23.6,0.37,N/A,Temperate,White et al. 2007
+Pycnonotus finlaysoni,26.3,0.22,N/A,Tropical,McKechnie & Wolf 2004
+Pycnonotus goiavier,28.6,0.25,N/A,Tropical,McKechnie & Wolf 2004
+Riparia riparia,13.6,0.23,N/A,Temperate,Wiersma et al. 2007
+Tachycineta bicolor,16.4,0.29,N/A,Temperate,Wiersma et al. 2007
+Tachycineta albilinea,11.7,0.25,N/A,Tropical,Wiersma et al. 2007
+Progne chalybea,34.9,0.47,N/A,Tropical,Wiersma et al. 2007
+Stelgidopteryx ruficollis,14,0.22,2,Tropical,This Study
+Hirundo tahitica,14.1,0.18,N/A,Tropical,McKechnie & Wolf 2004
+Psaltriparus minimus,5.5,0.12,N/A,Temperate,McKechnie & Wolf 2004
+Phylloscopus trochilus,10.7,0.21,N/A,Temperate,Wiersma et al. 2007
+Phylloscopus collybita,8.2,0.17,N/A,Temperate,Wiersma et al. 2007
+Acrocephalus arundinaceus,21.9,0.26,N/A,Temperate,McKechnie & Wolf 2004
+Acrocephalus schoenobaenus,11.5,0.22,N/A,Temperate,Wiersma et al. 2007
+Acrocephalus palustris,10.8,0.2,N/A,Temperate,Wiersma et al. 2007
+Hippolais icterina,12.5,0.25,N/A,Temperate,Wiersma et al. 2007
+Sylvia atricapilla,21.9,0.42,N/A,Temperate,Wiersma et al. 2007
+Sylvia borin,24.8,0.42,N/A,Temperate,Wiersma et al. 2007
+Sylvia curruca,10.6,0.2,N/A,Temperate,Wiersma et al. 2007
+Zosterops lateralis,11,0.15,N/A,Temperate,McKechnie & Wolf 2004
+Cinnycerthia fulva *,16.3,0.2,4,Tropical,This Study
+Pheugopedius fasciatoventris,27.2,0.31,N/A,Tropical,Wiersma et al. 2007
+Thryophilus rufalbus,22.6,0.3,N/A,Tropical,Wiersma et al. 2007
+Cantorchilus leucotis,18,0.21,N/A,Tropical,Wiersma et al. 2007
+Thryothorus ludovicianus,20.1,0.36,N/A,Temperate,Wiersma et al. 2007
+Troglodytes aedon aedon,10.2,0.21,N/A,Temperate,Wiersma et al. 2007
+Troglodytes aedon musculus *,13.3,0.21,N/A,Tropical,Wiersma et al. 2007
+Troglodytes solstitialis,13,0.27,2,Tropical,This Study
+Henicorhina leucophrys,15.3,0.31,6,Tropical,This Study
+Microcerculus marginatus,19.4,0.33,3,Tropical,This Study
+Cyphorhinus thoracicus *,34.4,0.42,13,Tropical,This Study
+Sitta carolinensis,19.4,0.36,N/A,Temperate,White et al. 2007
+Mimus polyglottos,44.2,0.68,N/A,Temperate,Wiersma et al. 2007
+Mimus gilvus,68.9,0.74,N/A,Tropical,Wiersma et al. 2007
+Acridotheres cristatellus,109.4,1.21,N/A,Tropical,White et al. 2007
+Sturnus vulgaris,85,1.25,N/A,Temperate,White et al. 2007
+Sialia mexicana,27.5,0.42,N/A,Temperate,McKechnie & Wolf 2004
+Myadestes ralloides †,28.8,0.39,7,Tropical,This Study
+Catharus dryas,35.9,0.46,9,Tropical,This Study
+Catharus ustulatus,28.2,0.43,38,Temperate,This Study
+Entomodestes leucotis,60.7,0.26,1,Tropical,This Study
+Turdus leucops,62.2,0.71,1,Tropical,This Study
+Turdus fuscater,138,0.96,1,Tropical,This Study
+Turdus chiguanco,87,0.54,4,Tropical,This Study
+Turdus serranus,81.2,0.97,4,Tropical,This Study
+Turdus nigriceps,51.1,0.53,5,Tropical,This Study
+Turdus ignobilis,56.6,0.41,1,Tropical,This Study
+Turdus lawrencii,55.3,0.67,1,Tropical,This Study
+Turdus hauxwelli,63.3,0.5,4,Tropical,This Study
+Turdus grayi,77.9,0.68,N/A,Tropical,Wiersma et al. 2007
+Turdus albicollis,51.3,0.46,15,Tropical,This Study
+Turdus migratorius,62.4,0.76,N/A,Temperate,Wiersma et al. 2007
+Copsychus saularis,33.5,0.23,N/A,Tropical,McKechnie & Wolf 2004
+Muscicapa striata,14.4,0.25,N/A,Temperate,Wiersma et al. 2007
+Larvivora cyane,13.4,0.17,N/A,Temperate,White et al. 2007
+Luscinia svecica,15.5,0.28,N/A,Temperate,White et al. 2007
+Luscinia svecica,19.9,0.26,N/A,Temperate,White et al. 2007
+Phoenicurus phoenicurus,13,0.23,N/A,Temperate,Wiersma et al. 2007
+Cinnyris venustus,7.1,0.14,N/A,Tropical,McKechnie & Wolf 2004
+Aethopyga christinae,5.2,0.12,N/A,Tropical,McKechnie & Wolf 2004
+Passer domesticus,23.5,0.31,30,Temperate,UCR
+Passer montanus,17.5,0.2,N/A,Temperate,White et al. 2007
+Ploceus aurantius,18.7,0.22,6,Tropical,UCR
+Amadina erythrocephala,22.4,0.21,N/A,Tropical,McKechnie & Wolf 2004
+Amadina fasciata,17.2,0.21,N/A,Tropical,McKechnie & Wolf 2004
+Amadina fasciata,18.2,0.23,4,Tropical,UCR
+Estrilda melpoda,7.5,0.13,N/A,Tropical,McKechnie & Wolf 2004
+Taeniopygia guttata,14.1,0.12,6,Temperate,UCR
+Lonchura cucullata *,10.6,0.08,N/A,Temperate,McKechnie & Wolf 2004
+Lonchura fringilloides *,19.8,0.23,4,Temperate,UCR
+Lonchura fuscans *,9.5,0.1,N/A,Tropical,McKechnie & Wolf 2004
+Lonchura punctulata,14.5,0.19,5,Tropical,UCR
+Lonchura malacca,11.8,0.14,N/A,Tropical,McKechnie & Wolf 2004
+Lonchura maja,12.8,0.15,N/A,Tropical,McKechnie & Wolf 2004
+Lonchura oryzivora,25.4,0.31,N/A,Tropical,McKechnie & Wolf 2004
+Vidua macroura,13.8,0.13,2,Tropical,UCR
+Motacilla flava,14.7,0.26,N/A,Temperate,Wiersma et al. 2007
+Anthus campestris,21.8,0.38,N/A,Temperate,Wiersma et al. 2007
+Anthus pratensis,18.9,0.3,N/A,Temperate,Wiersma et al. 2007
+Anthus trivialis,19.7,0.34,N/A,Temperate,Wiersma et al. 2007
+Fringilla montifringilla,21,0.38,N/A,Temperate,Wiersma et al. 2007
+Loxioides bailleui,36,0.46,N/A,Tropical,McKechnie & Wolf 2004
+Himatione sanguinea,13.5,0.3,N/A,Tropical,McKechnie & Wolf 2004
+Haemorhous cassinii,26.8,0.37,N/A,Temperate,Wiersma et al. 2007
+Haemorhous mexicanus,20.4,0.31,N/A,Temperate,McKechnie & Wolf 2004
+Acanthis flammea,16,0.24,N/A,Temperate,White et al. 2007
+Serinus canaria,19.5,0.14,2,Temperate,UCR
+Spinus tristis,12.8,0.33,N/A,Temperate,White et al. 2007
+Spinus pinus,13.8,0.35,N/A,Temperate,Wiersma et al. 2007
+Spinus magellanica *,11.6,0.2,1,Tropical,This Study
+Euphonia laniirostris,13.5,0.29,N/A,Tropical,Wiersma et al. 2007
+Euphonia xanthogaster *†,12.9,0.22,13,Tropical,This Study
+Seiurus aurocapilla,19,0.24,N/A,Temperate,White et al. 2007
+Parkesia noveboracensis,18.7,0.28,N/A,Temperate,White et al. 2007
+Vermivora cyanoptera,7.8,0.15,N/A,Temperate,Wiersma et al. 2007
+Protonotaria citrea,12.8,0.2,N/A,Temperate,McKechnie & Wolf 2004
+Geothlypis trichas,10.6,0.17,N/A,Temperate,White et al. 2007
+Setophaga citrina,12,0.22,N/A,Temperate,White et al. 2007
+Setophaga americana,7,0.12,N/A,Temperate,White et al. 2007
+Setophaga petechia erithachorides,12.2,0.14,N/A,Tropical,Wiersma et al. 2007
+Setophaga petechia petechia *,8.9,0.2,N/A,Temperate,Wiersma et al. 2007
+Setophaga palmarum,9.8,0.16,N/A,Temperate,Wiersma et al. 2007
+Setophaga pinus,12,0.18,N/A,Temperate,Wiersma et al. 2007
+Setophaga coronata,11.5,0.19,N/A,Temperate,Wiersma et al. 2007
+Setophaga dominica,9.8,0.16,N/A,Temperate,McKechnie & Wolf 2004
+Myiothlypis luteoviridis,14.7,0.24,12,Tropical,This Study
+Myiothlypis signata,14.3,0.22,2,Tropical,This Study
+Myiothlypis fulvicauda,12.8,0.35,1,Tropical,This Study
+Myiothlypis bivittata,15.5,0.3,11,Tropical,This Study
+Myiothlypis chrysogaster,14.4,0.28,2,Tropical,This Study
+Myiothlypis coronata,17.4,0.33,13,Tropical,This Study
+Basileuterus tristriatus,12.6,0.25,11,Tropical,This Study
+Myioborus miniatus,9.8,0.2,6,Tropical,This Study
+Myioborus melanocephalus,11.7,0.21,11,Tropical,This Study
+Cacicus chrysonotus,94,0.85,1,Tropical,This Study
+Amblycercus holosericeus,50.4,0.57,4,Tropical,This Study
+Icterus galbula,37.5,0.5,N/A,Temperate,Wiersma et al. 2007
+Agelaius phoeniceus,47.1,0.56,N/A,Temperate,Wiersma et al. 2007
+Quiscalus quiscula,92.2,0.99,N/A,Temperate,Wiersma et al. 2007
+Quiscalus mexicanus,137.3,1.13,N/A,Tropical,Wiersma et al. 2007
+Sturnella militaris,38.2,0.44,N/A,Tropical,Wiersma et al. 2007
+Coereba flaveola,11,0.24,3,Tropical,This Study
+Emberiza schoeniclus,17.6,0.3,N/A,Temperate,Wiersma et al. 2007
+Melospiza melodia,19,0.27,N/A,Temperate,McKechnie & Wolf 2004
+Melospiza georgiana,14.9,0.21,N/A,Temperate,McKechnie & Wolf 2004
+Zonotrichia capensis,22.2,0.31,3,Tropical,This Study
+Zonotrichia querula,33.3,0.45,N/A,Temperate,McKechnie & Wolf 2004
+Zonotrichia leucophrys,26.1,0.34,N/A,Temperate,McKechnie & Wolf 2004
+Zonotrichia albicollis,20.2,0.28,N/A,Temperate,McKechnie & Wolf 2004
+Junco hyemalis,18,0.3,N/A,Temperate,McKechnie & Wolf 2004
+Passerculus sandwichensis,15.9,0.22,N/A,Temperate,McKechnie & Wolf 2004
+Ammodramus savannarum,13.8,0.18,N/A,Temperate,McKechnie & Wolf 2004
+Ammodramus aurifrons,16.4,0.26,2,Tropical,This Study
+Spizella passerina,11.9,0.19,N/A,Temperate,McKechnie & Wolf 2004
+Pooecetes gramineus,21.5,0.27,N/A,Temperate,McKechnie & Wolf 2004
+Amphispiza bilineata,11.6,0.2,N/A,Temperate,McKechnie & Wolf 2004
+Arremonops conirostris,39.7,0.45,N/A,Tropical,Wiersma et al. 2007
+Arremon taciturnus *,27.7,0.42,4,Tropical,This Study
+Arremon torquatus,42.8,0.47,6,Tropical,This Study
+Arremon castaneiceps,35.7,0.53,1,Tropical,This Study
+Atlapetes melanolaemus *†,25.5,0.34,20,Tropical,This Study
+Chlorospingus parvirostris,23.1,0.33,9,Tropical,This Study
+Chlorospingus flavigularis,26.5,0.33,15,Tropical,This Study
+Cissopis leverianus,61.4,0.28,1,Tropical,This Study
+Hemispingus atropileus,20.4,0.38,13,Tropical,This Study
+Hemispingus superciliaris,14.6,0.32,3,Tropical,This Study
+Hemispingus melanotis,17.3,0.32,8,Tropical,This Study
+Hemispingus xanthophthalmus,13,0.19,3,Tropical,This Study
+Thlypopsis sordida,14.9,0.31,1,Tropical,This Study
+Thlypopsis ruficeps,11.9,0.23,5,Tropical,This Study
+Trichothraupis melanops,24.9,0.45,9,Tropical,This Study
+Eucometis penicillata,30.7,0.39,N/A,Tropical,Wiersma et al. 2007
+Tachyphonus luctuosus,12.5,0.32,1,Tropical,This Study
+Lanio versicolor,20.4,0.33,2,Tropical,This Study
+Ramphocelus dimidiatus,26.4,0.37,N/A,Tropical,Wiersma et al. 2007
+Ramphocelus carbo †,26.5,0.29,17,Tropical,This Study
+Ramphocelus flammigerus,32,0.42,N/A,Tropical,Wiersma et al. 2007
+Thraupis episcopus,30.4,0.42,N/A,Tropical,Wiersma et al. 2007
+Thraupis palmarum,32.6,0.4,N/A,Tropical,Wiersma et al. 2007
+Thraupis cyanocephala,38.2,0.46,13,Tropical,This Study
+Thraupis bonariensis,34.8,0.56,5,Tropical,This Study
+Buthraupis montana,89.7,1.02,9,Tropical,This Study
+Anisognathus igniventris,35,0.44,24,Tropical,This Study
+Chlorornis riefferii,49.8,0.51,8,Tropical,This Study
+Iridosornis analis,27.1,0.47,3,Tropical,This Study
+Iridosornis jelskii,20.6,0.38,9,Tropical,This Study
+Pipraeidea melanonota,20.3,0.38,3,Tropical,This Study
+Chlorochrysa calliparaea,16.9,0.25,5,Tropical,This Study
+Tangara arthus,22.4,0.37,5,Tropical,This Study
+Tangara xanthogastra,15.1,0.21,1,Tropical,This Study
+Tangara cyanicollis,16.3,0.35,1,Tropical,This Study
+Tangara larvata,16.2,0.24,N/A,Tropical,Wiersma et al. 2007
+Tangara vassorii,18.5,0.23,3,Tropical,This Study
+Cyanerpes cyaneus,13.5,0.27,N/A,Tropical,Wiersma et al. 2007
+Conirostrum sitticolor,11,0.18,2,Tropical,This Study
+Diglossa mystacalis,15.4,0.28,9,Tropical,This Study
+Diglossa brunneiventris,10.6,0.24,4,Tropical,This Study
+Diglossa cyanea,19.1,0.32,41,Tropical,This Study
+Haplospiza rustica,18,0.14,1,Tropical,This Study
+Sporophila americana,10.2,0.2,N/A,Tropical,Wiersma et al. 2007
+Sporophila nigricollis,8.9,0.2,1,Tropical,This Study
+Sporophila castaneiventris,8.5,0.2,4,Tropical,This Study
+Oryzoborus angolensis,12.3,0.2,N/A,Tropical,Wiersma et al. 2007
+Tiaris obscurus,12.1,0.16,2,Tropical,This Study
+Catamblyrhynchus diadema,17,0.25,6,Tropical,This Study
+Habia rubica,36.7,0.58,2,Tropical,This Study
+Habia fuscicauda,40,0.36,N/A,Tropical,Wiersma et al. 2007
+Cardinalis cardinalis,40.5,0.52,N/A,Temperate,McKechnie & Wolf 2004
+Cardinalis sinuatus,32,0.39,N/A,Temperate,McKechnie & Wolf 2004
+Saltator grossus,49.5,0.44,2,Tropical,This Study
+Saltator maximus,44.8,0.55,N/A,Tropical,Wiersma et al. 2007
+Saltator coerulescens,47,0.39,N/A,Tropical,Wiersma et al. 2007
+Saltator orenocensis *,32.7,0.31,N/A,Tropical,Wiersma et al. 2007
+Saltator striatipectus,42.1,0.51,N/A,Tropical,Wiersma et al. 2007
+Cyanocompsa cyanoides,25,0.38,3,Tropical,This Study
