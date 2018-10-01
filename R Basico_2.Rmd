@@ -1,0 +1,861 @@
+---
+title: "R Basico 2"
+author: "Justin Baldwin"
+date: "Octubre 1-2 2018"
+output: html_document
+---
+
+1. Cargar datos
+==============
+
+Un paper de Wilman et al. 2014 publico una base de datos de ecologia funcional de todas las especies extantes de aves y mamiferos.
+
+EltonTraits 1.0: Species-level foraging attributes of the world's birds and mammals, Wilman et al. 2014. Ecology 95 (7): 2027-2027. http://www.esapubs.org/archive/ecol/E095/178/#data
+
+Estos datos son libremente disponibles, y les permiten la analysis explorativa para estudios en ecologia, biodiversidad y conservacion. Los datos vienen de metadatabases como Handbook of the Birds of the World.
+
+Mejor bajar los datos de .csv de la pagina del curso. Carga el archivo .csv, sin numeros de filas, y sin conversion de caracteres a factores.
+
+```{r}
+#
+```
+
+Strings as Factors ayuda evitar factores y purificar datos.
+
+Funciones generales:
+
+Cuando abres una nueva tabla y quieres ver que tiene, `str()` es una de las funciones utiles. Estan los variables en clases adecuadas?
+```{r}
+```
+Parece que si.
+
+Hay datos numericos y categoricas de la dieta y del substrato del forrajeo, la diurnalidad, y la masa corporal, y su posicion taxonomica.
+
+La funcion `unique()` sirve para indentificar la diversidad de valores (niveles) en una variable categorica o vector de caracteres. La funcion `table()` te arroja conteos de valores distinctas de una variable tipo caracter o factor. 
+Con una linea, cual es la cantidad de valores distintas de la variable que corresponde a la dieta?
+```{r}
+```
+Cuantas especies estan en cada categoria de dieta?
+```{r}
+```
+
+Hay una categorica sospechosa? Cuales especies corresponden a ella? Usa un test de igualdad para encontrar las especies. Si no sale informativa, busca las filas en lugar de las especies.
+```{r}
+```
+
+```{r}
+```
+
+Los primeros numeros indican el numero de las filas. Entonces hay problemitas en las ultimas filas. 
+
+Pero ojala todas las filas ultimas no estan hecho de mierda. Con `tail()` arrojas las ultimas 6 (por defecto) filas de una tabla. Busca con `tail()` las ultimas 10 filas.
+
+```{r}
+```
+
+Listo, todo bacano, con excepcion de las ultimas filas. Define una nueva tabla sin las ultimas filas problematicas en 3 diferentes maneras (generando 3 objetos distintos). Una funcion comun que se usa con tablas es `subset()`. Requieres 2 argumentos: la tabla `x` y un test logico `subset(x, test_logico)` . Pista 1: que pasa con indices negativos? Pista 2: igualdad `==` / desigualdad `!=`.
+
+```{r}
+```
+
+Para averiguar que los 3 objetos son los mismos, podemos comparar los `rownames`. Pruebela con `head(tabla)`, la funcion contraria de `tail()`.
+
+```{r, eval=FALSE}
+rownames(head(t))
+```
+
+Para averiguar si los `row.names` de una tabla son exactamente los mismos de otra tabla, corre un test logico y usa una funcion conocida para contar los resultados. Corre los 3 comparisones.
+```{r}
+```
+
+Con `ls()` ves lo que tienes en el entorno, y `remove(objeto)` elimina objetos. Corre ls() y borra la tabla fea y las dos copias
+```{r}
+```
+
+Digamos que queremos trabajar con colibris y tangaras, separados y juntos. Extrae de la tabla buena una vez solamente los colibris y otra vez las thraupidae.
+
+```{r}
+```
+
+2. Plots - base
+=========
+
+base plots en R: facil, rapido, seco, modificar secuencialmente - no se necesita cargar otro paquete.
+
+Tanagaras y colibris varian en muchos rasgos, y seguro con el peso. Pero cual grupo tiene mas variacion en masa corporal? Colibris son mas especializados que tangaras en su dieta, supuestamente, entonces de pronto hay menos variacion en masa corporal con colibris.
+
+Uno de los plots esenciales es el histograma. Corre dos histogramas, una del peso de las colibris y otra para tangaras. `hist(x)` arroja un histograma de un vector numerico.
+
+```{r}
+```
+
+Listo hay dos plots, pero no se puede compararlos muy bien porque estan en diferentes escalas, tienen diferentes rangos, diferentes intervalos en x.
+
+Calcula los rangos de masa corporal para cada grupo. Pista: google.. o calcular minima y maxima.
+
+lo bueno de R Studio...
+```{r}
+```
+
+`hist()` aguanta otros argumentos e.g. `xlim` para determinar, con un vector numerico, los limites del eje x.
+
+```{r}
+```
+Mejor, pero que tal juntar los plots? Con `par(mfrow=c(x,y))` antes de correr un plot puedes dividir la pantalla de un plot en `x` filas y `y` columnas. 
+
+```{r}
+```
+
+Los titulos y etiquetas de los ejes x fastidian. Busca en la ayuda de `hist()` cuales otros argumentos la funcion sabe interpretar, y como eliminar los titlulos o cambiar los ejes.
+
+```{r}
+```
+
+Bien listo, eso si se puede comparar re facil. El toque final seria colocar una linea vertical donde el promedio en cada grupo con `abline()`. Puntos si es rojo y un poco gordecito.
+
+
+```{r}
+```
+
+Los histogramas ya nos dieron mucha informacion: comparison visual de la distribucion y promedios de los 2 grupos.
+
+Guarde el plot! PDF, PNG, SVG, TIFF etc.
+
+En base R, vale la pena conocer 2 otros tipos de plots, los `boxplots` y `scatterplots`.
+
+Los dos salen con el mismo codigo, si los variables (vectores) estan en clases/formatos adecuados.
+
+En un plot, igual que en un modelo, parecido como en una hipotesis, toca que decir cual variable es la variable dependiente, y cual es la independiete. Se habla tambien de variables de respuesta y variables explicativas.
+
+En R, una de las convenciones es la notacion de modelos: `y ~ x` significa, para muchos funciones, que `y` es la respuesta y `x` una variable explicativa. En `plot()` puedes usar el argumento `data` para ahorrar el nombre de la tabla.
+
+```{r}
+#plot(y~x, data=tabla)
+```
+
+Con un plot, investiga la hipotesis de "tangaras que son mas especializadas en frutas pesan mas"
+```{r}
+```
+
+Cual es la hipotesis nula correspondiente? Que crees? Rechazarlo o no? Como? Cuales tipos de variables son?
+
+Cuales otras clases de dieta tienen? http://www.esapubs.org/archive/ecol/E095/178/metadata.php
+
+Compara lo que viste con dietas de invertebrados, plantas, semillas y nectar.
+
+```{r}
+```
+
+
+Alguna especializacion que engorda o enflaquece las tangaras? Cual variable tiene mayor corelacion? 
+
+$\rho$ = coeficiente de corelacion.
+
+Pista: entrenamiento con:
+
+http://guessthecorrelation.com/
+
+Nope but in R!
+```{r, eval=FALSE}
+install.packages("devtools")
+library(devtools)
+install_github("aejensen/GTC")
+library(GTC)
+guessTheCorrelation() #en la consola!
+```
+
+Busca la funcion `cor()`, y usala para apoyar o tu conclusion de la especializacion!
+
+```{r}
+```
+
+Interesante.
+
+*Boxplots*
+
+Tuvimos datos numericos, que tal datos categoricas? Pues con `plot()` toca que usar la misma formula.
+
+Entre la base de colibris, hay variacion en la variable de nocturnalidad? Busca conteos de cada nivel de la variable categorica. Supuestamente no hay colibris nocturnos...
+```{r}
+```
+Gracias a Dios. Entonces usamos la base entera. Hay una relacion entre nocturnalidad y masa corporal? 
+pista: clase
+```{r}
+```
+
+No se ve mucho, que tal si eliminamos los mas gordos del analisis, digamos los que pesan mayor del cuantil 75% ? Como identificarlos?
+
+```{r}
+```
+
+Muy interesante.
+
+Confirme lo que dicen las lines grandes: promedio o mediano?
+
+Con `tapply` puedes applicar funciones varias veces. El uso `tapply(x, grupo, function)`. `x` es el vector, `grupo` es un vector que te dice cual es el grupo de cada valor en x, y `function` es la funcion que aplicas a `x`.
+
+```{r}
+```
+
+```{r}
+```
+
+Buhos son gordos y nocturnos, pero hay unos livianos tambien. Cuantas familias estan representados en los gordos nocturno y cuantos de estos son buhos? Arroja una tabla de conteos, organizado por abundancia (los mas abundantes al principio). pista: `order()`
+
+```{r}
+order(c(98, 4, 42))
+```
+
+```{r}
+```
+
+Piensa en otra hypotesis con estos datos, y corre un plot para investigarlo. Comunica lo que encontraste al vecino.
+
+```{r}
+
+```
+
+La modificacion secuencial es una de las ventajas principales de `base` plots. Para agregar series de puntos de varios grupos, hay la funcion `points()` el uso junto con color puede ayudar en el descubrimiento de patrones.
+
+con `type="n"` en `plot()` empiezas un plot vacio
+
+Corre un plot de de la proporcion de pez de la dieta vs masa corporal con zambullidores en rojo, garzas en azul, y pinguinos en verde. Puntos para `legend(x, y, col, legend, pch)`, buenas descriptores de los ejes y exclusion de >7.5kg. Define nueva variable de kilogramas y usala en lugar de gramas.
+```{r}
+```
+
+Cuales son los pinguinos gordos (>4kg) que no comen pescado? `text(x, y, labels)` cuidado con lo que `text` sabe interpretar.
+
+Para juntar condiciones en un test logico, usa `&` como `condicion_logico1&condicion_logico2`
+
+
+```{r}
+```
+
+Corre otro plot con los mismos puntos, pero con etiquetas de la especie mas pesado en cada grupo. En la etiquta, coloca la cantidad de kg que el bicho pesa.
+
+pista:
+```{r}
+paste(c("que"), c("divertido"), sep="XDXDXDXDXD")
+paste(c("que", "es"), c("divertido", "R"), sep="_")
+```
+
+```{r}
+```
+
+
+*dplyr*
+
+```{r, eval=F}
+install.packages(c("dplyr", "tidyr"))
+library(dplyr)
+library(tidyr)
+```
+
+Todo de lo que se hace en base R se puede hacer con `dplyr` y `tidyr`, pero con mucho menos trabajo. 
+
+Forman parte del `tidyverse` (https://www.tidyverse.org/)
+
+`tidy` data, son datos "limpios", sin amibguedad, en formatos/clases corectos, con un minimo de codigo, y que con codigo mas descifrable.
+
+Ademas `dplyr` tiene unos funciones superutiles, casi esenciales con el uso de los plots en `ggplot2`.
+
+La idea es manipular objetos tipo `data.frame`. 
+
+Cada operacion se hace con `%>%` el "tubo"/"tuberia".
+
+Funciones conocidos:
+
+algo como structure (`str()`) es `glimpse()`
+
+```{r, eval=F}
+glimpse(t1)
+```
+
+
+Por ejemplo: si queremos selecionar solo unas columnas de una tabla:
+```{r, eval=FALSE}
+ncol(t1)
+t1<-t1 %>% select(-"Diet.EnteredBy", -"SpecID")
+ncol(t1)
+#View()
+```
+
+Para crear otra variable: 
+```{r, eval=FALSE}
+t1<-t1 %>% mutate(log_kg=log(kg))
+```
+
+Crea otra variable que sea la suma de las dietas de todas las categorias de vertebrados:
+```{r}
+```
+
+Selecionar filas:
+```{r}
+motmots<-t1 %>% filter(BLFamilyLatin=="Momotidae")
+```
+Y organizar tablas segun una columna (o al reves!)
+```{r}
+motmots %>% select(Scientific, kg) %>% arrange(kg)
+```
+
+Arroja una tabla pequena con los 3 especies de rascones/polluelas mas carnivoros/"vertebradivoros"
+
+pista: `head(sort(x))` en dplyr es `%>% top_n()`
+
+```{r}
+```
+
+* Para mi, la ventaja principal de dplyr es el uso de las funciones `group_by` y `summarise`.
+* Increible: group_by con mas de una variable !
+
+```{r, eval=FALSE}
+t1 %>% group_by(BLFamilyLatin) %>% 
+  summarise(avg_vert=mean(vert_eaterP_sum)) %>% 
+  top_n(5)
+```
+summarise hace nueva tabla!
+
+Cual clase de dieta tiene mayor masa corporal?
+```{r}
+```
+Agrega otra columna para la estandard desviacion y el numero de especies. 
+```{r}
+```
+Calcula el estandard error y los 95% intervalos de confianza.
+
+Si no te acuerdas cual es factor para multiplicar el estandard error para obtener un intervalo de confianca 95%, hay un desvio.
+
+
+`rnorm(500, 0, 1)` te arroja 500 observaciones/datos/valores aleatoreas de una distribucion normal con el promedio 0 y la varianza 1. COrre histogramas de 3 muestras de 500 observaciones.
+
+```{r}
+```
+
+La funcion `dnorm(x, 0, 1)` arroja las probabilidades de encontrar los valores en x, asumiendo una distribucion Normal con el promedio 0 y la varianza 1.
+
+```{r}
+x<-seq(from=-5, to=5, by=0.01)
+pdf<-dnorm(x, 0, 1)
+plot(pdf~x, type="l")
+```
+
+Que tal la probabilidad de encontrar el valor 0 en una distribucion normal con promedio 0 y varianza 1? El valor -1? El valor -2? -3?
+```{r}
+```
+
+Que tal los valores entre -2 y 0, entonces este area?
+```{r, eval=F}
+asbio::shade.norm(from=-2, to=0, tail="middle", show.p = F)
+```
+
+`pnorm(x, 0,1)` hace integraciones desde la izquierda hasta `x` en una distribucion Normal con 0 promedio y varianza 1.
+
+Calcula la probabilidad de encontrar valores entre -2 y 0.
+```{r}
+```
+`qnorm(x,0,1)` te dice hasta donde en la distribucion tienes que integrar para obtener una area debajo de la curva igual a `x`, asumiendo una dis de una distribucion Normal con promedio 0 y varianza 1.
+
+Entonces, si un intervalo de confianza es el rango de x que contiene 95% de la area debajo de la curva, como asi
+```{r, eval=F}
+#
+```
+
+Cuanta area esta las dos colas? En cada cola? Calucla las puntos en x exactos con `qnorm(x, 0, 1)`
+
+```{r}
+```
+
+Usa estos factores para obtener los intervalos de confianza
+
+```{r}
+```
+
+*Combinar tablas*
+
+Datos de: Basal metabolism in tropical birds: latitude, altitude, and the 'pace of life'. 2015. Gustavo A. Londono, Mark A. Chappell, Maria del Rosario Castaneda, Jill E. Jankowski and Scott K. Robinson. Functional Ecology,  29 (3): 338-346.
+
+```{r}
+#bmr<-read.csv("C:/Users/Justin/Desktop/Research/tunja2018/bmr_2015.csv", 
+#              stringsAsFactors = F)
+#glimpse(bmr)
+```
+
+Tenemos datos de especies, y queremos relacionar las 2 tablas. 
+
+Para juntar tablas segun una variable, las dos tablas tienen que tener una variable en comun. Pero se llaman diferente.
+```{r}
+table(names(bmr) %in% names(t1))
+```
+Cual variable tienen en comun?
+
+Coloca otra columna en la tabla de `bmr` con el mismo nombre de la variable corespondiente en la tabla de EltonTraits.
+
+```{r}
+```
+
+En base R, la funcion `merge(x, y, by="variable")`, combina las tablas `x` y `y` segun la `variable` en comun, pero no sirve en dplyr.
+
+Cuantas especies hay en `bmr` que estan en EltonTraits? 
+Cuantas especies hay en `bmr` que no estan en EltonTraits? 
+`nrow(x)` te dice cuantas filas estan en tabla `x`.
+
+```{r}
+```
+
+Tal vez las diferencias tienen que ver con cambios/diferencias en la nomenclatura.
+
+Entonces en dplyr, uno tiene que decir como vas a combinar tablas, y que haces con filas que estan en la una tabla, pero no en la otra. Hay 4 maneras de combinar tablas en dplyr
+
+`left_join(x, y, by="variable")`
+`right_join(x, y, by="variable")`
+`full_join(x, y, by="variable")`
+`inner_join(x, y, by="variable")`
+
+Compara las cuatro maneras be juntar datos, usando solo `nrow()` para comparar la cantidad de filas en la 'ingredientes', y en lo que resulta.
+
+```{r}
+```
+
+
+Listo
+
+Domar Datos
+https://www.rstudio.com/wp-content/uploads/2015/03/data-wrangling-spanish.pdf
+
+
+*ggplot2*
+
+
+Una "gramatica de graficas" Hadley Wickham 2009
+
+En `ggplot2` una de las ideas es que hay "poca distancia entre la idea y un plot".
+
+```{r, eval=FALSE}
+install.packages("ggplot2")
+library(ggplot2)
+```
+
+
+La estructura de ggplot codigos es que sale solamente con datos limpios. Cada variable utilizada corresponde con una dimension grafica.
+```{r}
+ggplot(bmr, aes(x=mass, y=bmr)) + geom_point()
+```
+
+Transformaciones son bastante facil, usa una transformacion mas adecuada.
+```{r}
+```
+
+Otros variables se puede representar con colores(`color`), tamanos de puntos(`size`), transparencia(`alpha`) o simbolos(`shape`).
+
+* diferencias entre dimensiones graficas como atributos aesteticos y fijos
+
+```{r}
+```
+
+```{r}
+```
+
+Y se puede separar los plots con `facet_wrap(~variable)`
+```{r, eval=F}
+ggplot(bmr, aes(x=log(mass), y=log(bmr))) + geom_point() + facet_wrap(~zona)
+```
+Y se puede separar los plots con `facet_grid(~variable1+variable2)`
+```{r, eval=F}
+ggplot(bmr, aes(x=log(mass), y=log(bmr))) + geom_point() + facet_wrap(~zona+origen)
+```
+
+Usa el tamano de muestreo como una dimension grafica, y asegura que las variables estan en el formato corecto.
+
+```{r, eval=FALSE}
+```
+
+Que lastima que los otros autores no publicaron sus datos. Especialmente un articulo recien de BMR de ca. 250 especies mas de Thailandia...
+
+Hay una diferencia de muestreo entre especies tropicas vs temperadas? `geom_boxplot()`
+
+```{r}
+```
+
+Hay una diferencia de bmr relativa  entre especies tropicas vs temperadas? `geom_boxplot()`
+
+```{r}
+```
+
+
+El paper se trata de las diferencias en tasa metabolica basal entre especies tropicas y temperadas. Con `stat_smooth()` agregas lineas de tendencia. Agrega una para cada grupo de `zona` en plot de `log(bmr)~log(mass)`.  Como enforzar que las lineas sean lineal?
+
+```{r}
+```
+
+Varias factores ecologicas y evolutivas explican variacion en BMR. Aunque la gran mayoria de la variacion en BMR esta capturada del logartimo de masa corporal, las discrepancias entre los valores observadas y predictas pueden contener informacion.
+
+Vamos a correr una regresion lineal, y buscar patrones en los residuos. 
+
+*regresion lineal*
+
+```{r}
+data(mtcars)
+glimpse(mtcars)
+plot(mpg~hp, mtcars)
+```
+
+Carros con muchos caballos no tienen consumo economico.
+
+Regresion lineal sirve para construir un modelo:
+$y_{mpg}=\alpha +\beta \times x_{hp}$
+```{r}
+lm_cars<-lm(mpg~hp, data=mtcars)
+summary(lm_cars)
+```
+
+Grafica con base plot la relacion predicta del modelo (una linea `abline()` ), usando `coef()` para obtener los valores de coeficientes exactas. 
+
+```{r}
+```
+
+Las distancias verticales son los residuos. Con `resid(modelo)` puedes obtenerlos.
+
+```{r}
+head(resid(lm_cars))
+```
+
+Recuerda que queremos buscar los otros factors que explican variacion en BMR, despues de controlar el efecto de masa corporal. Entonces, usando un `_join()` adecuado, saca todos los datos de especies que estan en EltonTraits y la del BMR y corre un modelo lineal entre BMR y masa corporal. Interpreta los coeficientes.
+
+
+```{r}
+```
+
+Despues, arroja los residuos en la tabla, y compara los residuos entre las categoricas de dieta en un plot adecuado.
+
+```{r}
+```
+
+```{r}
+```
+
+Hubiera esperado mas BMR con los nectarivoros. A mira, los nectarivoros son juntos con los frugivoros.
+
+Separa los nectarivoros, usando un umbral de 80%, y grafica un histograma de los residuos de estos nectarivoros.
+
+Usa la funcion `ifelse(test_logico_usando_un_vector_x, si, no)` que, para cada valor de x, arroja el valor `si` cuando el test sale `TRUE`, y `no` cuando el test sale `FALSE`.
+
+pista. `cbind` sirve solo para conectar los vectores (formalmente una matriz).
+```{r}
+unos_datos<-c(rnorm(10, 5, 1))
+cbind(
+  unos_datos,
+  ifelse(unos_datos>5, "mayor_que_5", "menor")
+)
+
+```
+
+```{r}
+```
+
+Parece mas interesante.
+
+Ya sabemos que perdimos datos usando el `_join`.  Puede ser que perdimos muchos colibris? Cuales bichos perdimos usando el join?
+```{r}
+```
+
+Mira que loco, perdimos muchos datos solo por los simbolos. Y unos por la subespecie.
+
+Ahora viene la magia de trabajar con vectores tipo `caracter`. Usando funciones como `grep` y `gsub` se puede programaticamente cambiar textos. Y ahora necesitamos eso.
+
+Basicamente, `gsub(patron, reemplazamiento, x)` trabaja con un patron, y algo con cual se puede reemplazarlo. Se busca el patron en x.
+
+Ejemplo academico.
+```{r, eval=FALSE}
+#install.packages(c("readr", "rvest", "xml2"))
+library(devtools)
+install_github("josiahparry/geniusR")
+library(geniusR)
+mi_gente <- genius_lyrics(artist ="J Balvin", song = "Mi Gente")
+```
+
+Vamos a reemplazar unas palabras, cual es la palabra mas frecuente?
+
+```{r}
+tail(sort(table(c(unlist(strsplit(paste(mi_gente$lyric, collapse = " "), " "))))))
+mi_gente$replaced<-gsub(pattern = "mi", replacement="tu", mi_gente$lyric)
+head(mi_gente$replaced)
+mi_gente$replaced<-gsub(pattern = "[Mm]i ", replacement="tu ", mi_gente$lyric)
+head(mi_gente$replaced)
+mi_gente$replaced<-gsub(pattern = "[Mm]i [A-Za-z]+ ", replacement="mi cucha ", mi_gente$lyric)
+mi_gente$replaced<-gsub(pattern = "[Mm]i [^ ]+ ", replacement="mi cucha ", mi_gente$lyric)
+head(mi_gente$replaced)
+```
+
+*regular expressions*
+`gsub()` para reemplazar
+`grepl()`, como `test_logico` : arroja vector logico
+`grep()`, como `which(test_logico)` : arroja indicadores donde `test==T`
+
+https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
+
+Para el uso en nuestro caso:
+```{r}
+bmr$genus<-gsub(x=bmr$Scientific, pattern = " [A-Za-z ]+", replacement = "")
+bmr$genus<-gsub(x=bmr$genus, pattern = "[^A-Za-z]", replacement = "")
+bmr$species_name<-gsub(x=bmr$Scientific, pattern = "[^A-Za-z ]", replacement = "")
+bmr$species_name<-gsub(x=bmr$species_name, pattern = " $", replacement = "")
+bmr$species_name<-gsub(x=bmr$species_name, pattern = "[A-Za-z]+ ", replacement = "")
+bmr$clean_scientific<-paste(bmr$genus, bmr$species_name, sep=" ")
+```
+
+
+Juntar `bmr` con `EltonTraits` otra vez.
+```{r}
+t1$clean_scientific<-t1$Scientific
+t_inner<-inner_join(t1, bmr, by="clean_scientific")
+```
+Ganamos 77 especies!
+
+Repite el plot que compara los residuos de BMR de nectarivoros contra los otros.
+
+```{r}
+```
+
+No cambia mucho.
+
+Compara BMR y sus residuos entre familias. Con el paquete `gridExtra` puedes colocar varias objetos de ggplot en una matriz (`grid.arrange(x, y, ncol=1)` te arroja los ggplots `x` y `y` en una columna).
+
+usando `filter()`, hagal plot de unos familias Neotropicales, e.g. los tinamus, hormigueros, tangaras, colibris, cucaracheros y otros de zonas temperadas, e.g. reinitas y atrapmoscas de Eurasia (Sylviidae y Muscicapidae) y carpinteros.
+
+```{r}
+
+```
+
+Listo, con un modelo homogeneo para todas las especies, no hay mucha variacion que sobre y corresponde a familas, sean tropicas o temperadas. Hay variacion en los residuos que corresponde a la zona?
+```{r}
+```
+
+Hm, el modelo lineal con los logaritmos tiene la suposicion que el mismo modelo aplica para cada grupo. Pero lo que los autores encontraron es que los pendientes de `log(bmr)~log(masa coporal)` varian entre bichos de zonas temperadas y tropicas y entre familias.
+
+Encontraron que hay una interaccion entre `log(masa corporal)` y `zona`, que los pendientes son diferentes. Que el efecto de log masa corporal es diferente para temperados y tropicos. Normalmente, este seria algo de regresion lineal y ANOVA, mezclando efectos cuantitativas y categoricas, entonces ANCOVA.
+
+Con modelos lineales, todos son iguales.
+
+En la notacion de modelos en R 
+
+* `y~x1+x2`: dos efectos aditivos
+* `y~x1*x2`: dos efectos aditivos y su interaccion.
+
+Corre el modelo lineal que nos contesta la pregunta: tienen bichos de zonas temperadas y tropicas la misma pendiente de log(bmr)~log(masa corporal).
+
+```{r}
+
+```
+
+
+El ultimo uso comun de `dplyr` y `ggplot2` sirve para la pregunta mas frecuente en ggplot2: como agregar dos series de datos al mismo plot?
+
+La respuesta es: tablas amplias vs tablas angostas
+datos amplios
+```{r}
+head(mtcars)
+```
+Como agregar caballos?
+```{r}
+ggplot(mtcars, aes(x=hp, y=mpg))+geom_line()
+```
+con `gather()`
+```{r}
+mt_long<-mtcars %>% gather("Variable", "Valor", c(3,4))
+mt_long  %>% top_n(20)
+#View(mt_long)
+```
+
+corespondencia? variable grafica y variable de datos...
+
+```{r}
+ggplot(mt_long, aes(x=Valor, y=mpg, col=Variable))+geom_line()
+```
+
+Grafica la relacion entre log(bmr) y especializacion (3 series: Frugivoros, Nectarivoros, Insectivoros) con puntos
+
+pista: `geom_jitter()`
+
+```{r}
+```
+
+Divida los especies en 3 grupos de log masa corporal.
+
+pista: 
+```{r}
+unos_datos<-rnorm(15, 4, 1.5)
+unos_datos
+cut(unos_datos, 4)
+cut(unos_datos, 4, labels = c("a", "b", "c", "d"))
+```
+```{r}
+```
+
+Cual es el un problema aqui para correr modelos: cuantos puntos hay?
+
+*GGally*
+
+Sirve para buscar patrones en la primera vista de datos
+
+```{r, eval=F}
+install.packages("GGally")
+library(GGally)
+p<-t_inner %>% select(bmr, zona.x, kg, Diet.5Cat, Diet.Nect) %>% mutate(log_bmr=log(bmr), 
+                                                                        log_kg=log(kg)) %>%
+  select(-c(bmr, kg))
+ggpairs(p)
+```
+
+*como se hace tal ggplot?*
+
+```{r, eval=FALSE}
+install.packages(c("manipulate", "mosaic"))
+library(mosaic)
+mplot(p)
+```
+
+
+Funciones
+========
+
+* siempre llegamos a situaciones donde no hay exactamente el `verbo` en R que estamos buscando.
+* cuando repites mucho copiar-pegar...
+* escribir funciones!
+* son objetos, definido con `function(){}`
+* 1. definirla, 2. usarla
+
+```{r}
+cuadrar<-function(x){x^2}
+cuadrar(2)
+cuadrar(c(2:4))
+```
+Crea una funcion con 2 argumentos: 1 que es un valor, otro que sube el valor a una potencia.
+Crea otra funcion que no tiene argumentos pero que cada la corres, arroja un valor aleatoreo de una distribucion Normal con promedio 5 y varianza 4
+```{r}
+```
+
+Funciones definen sus proprios entornos: aqui uso la funcion para definir un funcion nueva
+```{r}
+subir_a_n<-function(n){
+  subir<-function(x){
+  x^n
+  }
+  subir
+}
+cubo<-subir_a_n(3)
+cubo(7)
+```
+
+control con funciones: `if` `else` con `tests_logico_que_arroja_1_valor_T_o_F`
+
+```{r}
+f<-function(x){
+  if(x>0){print("positivo")}
+  else{print("negativo")}
+}
+f(rnorm(1, 0, 1))
+```
+
+Diferencia entre `print()` y `return()`.
+
+Escribe una funcion que toma una familia como argumento, calcula de esta familia la correlacion entre especializacion en semillas y masa corporal, y arroja el valor de la correlacion si la correlacion esta por encima de 0.3 o menor que -0.3. Si no, arroja `NA`. La funcion tiene 2 argumentos: la familia y la tabla donde buscar.
+
+pista: `abs()`. Pruebela con horneros, tangaras y palomas.
+```{r}
+
+```
+
+Estamos repitiendo mucho, entonces ya hay otra cosa en R para evitarlo...
+
+*for loops*
+
+son parecidos a funciones, pero no tienen su propio entorno. 
+
+
+```{r, eval=F}
+for(i in 1:10){
+  print(i)
+}
+for(i in c("a", "b", "c")){
+  print(i)
+}
+```
+
+
+for loops sobreescriben valores.
+
+```{r, eval=F}
+for(i in 1:10){
+  o<-i^2
+  print(o)
+}
+```
+
+Para un vector de las 20 familias que mas diversas en la tabla grande, corre la funcion de las semillas. 
+
+Si hay un error, incopora en la funcion una manera de arrojar un valor que indica si la familia no tiene ni una especie que come por lo menos algo de semillas. 
+
+tip: `all()`,  `if(){if(){}}`
+```{r}
+all(c(T, T, T, F, T))
+all(c(T, T, T, T, T))
+```
+
+```{r}
+
+```
+
+
+
+*for loops para crecer objetos*
+
+Ya vimos que la funcion sirve para algo, entonces seria vacano guardar todos los valores que el for loop arroja en un solo vector.
+
+El truco es definir una cosa (vector, o tabla) vacia, y con cada vuelta del for loop agregar el resultado del for loop al vector "vacio".
+```{r}
+result<-c()
+for(i in 50:60){
+  result<-c(result, i^2)
+}
+```
+
+Ahora, usando la funcion de antes, define un vector para guardar los corelaciones etc , y corre la funcion con cada familia. Excluye las familias con menos de 3 especies al principio. Pega el vector como una nueva columna. 
+```{r}
+```
+
+Que tal la distribucion de los coeficientes numericos?
+```{r}
+```
+Los coeficientes con mas especies son mas robustos. Hay una relacion entre el tamano de muestreo y la corelacion?
+
+```{r}
+```
+
+Interpretalo.
+
+Define una nueva funcion que, en lugar de buscar el coeficiente de correlacion, corre un modelo lineal entre especializacion en semillas y masa corporal. Hazlo otra vez solo con las familias con mas de 3 especies. Cada vez que la funcion corre debiera arrojar una fila con 4 columnas: Familia, alpha, beta , (del modelo lineal) y el Adjusted R-Squared del modelo.
+
+pista:`capture.output()`
+```{r}
+fams[156:158,]
+capture.output(fams[156:158,])
+```
+
+*lists*
+
+para organizar datos heterogeneos
+```{r}
+a=list(a=rnorm(10), b=rnorm(3), c=matrix(c(1:9), nrow=3))
+a
+```
+
+```{r}
+a[1]
+a[[1]]
+```
+
+*lapply, sapply*
+```{r}
+lapply(a, max)
+sapply(a, max)
+```
