@@ -1,21 +1,18 @@
 ---
-title: "R Basico 1"
+title: "R Basico 1 - Soluciones"
 author: "Justin Baldwin"
-date: "Octubre 1, 2018"
+date: "September 24, 2018"
 output: html_document
 ---
 
-
 1. R como calculadora
 ==============
-
 
 Escribe aqui en lo que vas a trabajar. R no va a interpretar nada de eso.
 
 Los bloques de codigos en R empiezan y terminan.  
 ```{r}
-t=rnorm(100)
-hist(t)
+
 ```
 
 Correr bloque entero con CRTL+ALT+N/COMMAND+OPTION+N
@@ -28,26 +25,24 @@ Aqui viene un bloque de codigo. Averigua que el resultado debajo del bloque es i
 ```{r}
 6+2
 6-2
-#
 ```
 
 Que significa el operador `*`?
 ```{r}
-4*2
+6*2
 ```
 
 Y que hacen `^`, `/` y `%%` ? 
 ```{r}
-4^2
-4/3
-
-4%%2
+6/2
+6^2
+6%%2
 ```
 Dentro de los bloques de codigo, todo que esta escrito despues del #, R no va a interpretar.
 
 Pregunta: R entiende el orden de operaciones?
 ```{r}
-6+2*3
+#6+2*3
 #que esperas si si, que si no?
 ```
 
@@ -60,6 +55,7 @@ El entorno es como una paleta de todos los ingredientes de la analisis. Cada vez
 Define un objeto que se llama `a`, guarda el valor 5 en `a`, y llama el objeto. Eleva `a` a la potencia de `3`.
 ```{r}
 a<-5
+a
 a^3
 ```
 
@@ -68,7 +64,7 @@ a^3
 
 Define un objeto `s` como una secuencia de 65 hasta 72. Llamalo. 
 ```{r}
-s<-seq(65, 72)
+s<-65:72
 s
 ```
 
@@ -76,13 +72,12 @@ Cuando datos estan guardados en objetos, aqui por ejemplo vectores, `s` es un ve
 
 Calcula la suma de `3` y cada valor de `s` (Ocho adicidiones).
 ```{r}
-s+3
+3+s
 ```
 
 Calcula la suma de `35` y cada valor de `s` y guarda los resultados en un objeto que se llama `o`.
 ```{r}
-
-o<-s+35
+o<-35+s
 ```
 
 Redfine `o` dividiendolo por 100, y llama `o`.
@@ -95,29 +90,24 @@ Puedes hacer los operaciones vectorizadas, usando vectores tambien. Cual es la p
 
 ```{r}
 o/s
-f<-4:8
-i<-2:3
-f/i
-f
-i
 ```
 
 Cuando datos estan guardados en objetos en una manera conocida, se puede usar funciones. Funciones son como verbos y tienen nombres, seguido de parentesis. Como traducir `sum()` y `length()` de R al espa?ol? Para usar una funcion con un objeto, corre el nombre de la funcion con el objeto entre parentesis.
 
-```{r, eval=F}
-sum(o)
-length(o)
+```{r}
+sum(s)
+length(s)
 ```
 
 Cual es el promedio de `s`? 
 
 ```{r}
-sum(o)/length(o)
+sum(s)/length(s)
 ```
 
 Cual es el atajo para calcular el promedio? (Pista: R tiene mucho en comun con ingles). R Studio puede ayudar y no es `average()`!
 ```{r}
-mean(o)
+mean(s)
 ```
 
 Funciones pueden tener varios argumentos, separados con commas entre los parentesis (`function(x,y)`). Que hace la funcion `rep(x, y)`?
@@ -128,25 +118,24 @@ rep(3,12)
 Cambia el orden de los argumentos. Que hace el primer argumento, que hace el segundo?
 
 ```{r}
-rep(12,3)
-rep(times=3, x=12)
+rep(12, 3)
 ```
 
-Funciones pueden llamar otras objetos Define otro objeto `mean_vec` que consiste de 3 repeticiones del promedio `s`. Arroja el cubo del producto de los vectores `mean_vec` y la secuencia 1 hasta 3.
+Funciones pueden llamar otras funciones. Define otro objeto `mean_vec` que consiste de 3 repeticiones del promedio `s`. Arroja el cubo del producto de los vectores `mean_vec` y la secuencia 1 hasta 3.
 ```{r}
-mean_vec<-rep(mean(o), 3)
-
+mean_vec<-rep(mean(s),3)
+(mean_vec*1:3)^3
 ```
 
 Los objetos `mean_vec`, `s` y `o` son vectores. En R, vectores son tipos de objetos comunes y muy basal. Tienen la dimension `N x 1`, donde `N` dice cuantos valores estan en el vector. Cuando le toca hacer un vector, la funcion `c()`, sirve para juntar valores para formar un vector.
 
 ```{r}
-c(1,2,3, 5)
+c(1,2,3)
 ```
 
 La funcion `c()` sirve tambien para juntar objetos. Haz otro objeto `m` que consiste de `mean_vec`, y las cifras 66 y 2.
 ```{r}
-m<-c(mean_vec, 66, 3)
+m<-c(mean_vec, 66, 2)
 m
 ```
 
@@ -155,10 +144,10 @@ La function `structure` (`str()`) es una de las funciones esenciales que tiene e
 Corre `structure` en el objeto de antes (`mean_vec`), los objetos `m`, `o`, `s` y `a`.
 ```{r}
 str(mean_vec)
-str(m)
-str(o)
 str(s)
 str(a)
+str(o)
+str(m)
 ```
 
 El primer parte de lo que `structure` dice es el clase del objeto. En nuestro caso, todo los tres objetos son vectores, y varian en la longitud, digamos la cantidad de valores que cada vector tiene.
@@ -179,9 +168,7 @@ Define un objeto que sea una secuencia de nombres de especies de Colibris. Cual 
 colibri_vector<-c("Coeligena wilsoni", "Coeligena prunellei", "Coeligena torquata", "Coeligena phalerata",
                   "Coeligena bonapartei", "Coeligena helianthea", "Coeligena lutetiae", "Coeligena violifer",
                   "Coeligena iris")
-
 class(colibri_vector)
-
 ```
 
 De vez en cuando toca que cambiar la clase de un objeto. En general, las funciones asi empiezan con `as.clasequequieres`, por ejemplo. `as.character(x)` te convierte el vector `x` en un vector tipo caracter.
@@ -190,24 +177,24 @@ Cambia `colibri_vector` a un factor. Convierte `colibri_vector` a un vector nume
 
 ```{r}
 colibri_vector<-as.factor(colibri_vector)
-class(colibri_vector)
+as.numeric(colibri_vector)
 ```
 
 Recarga el vector original de `colibri_vector` y conviertalo al tipo numerico. 
 
 Cual es la diferencia entre un vector tipo factor y un vector tipo caracter?
 ```{r}
+colibri_vector<-c("Coeligena wilsoni", "Coeligena prunellei", "Coeligena torquata", "Coeligena phalerata",
+                  "Coeligena bonapartei", "Coeligena helianthea", "Coeligena lutetiae", "Coeligena violifer", "Coeligena iris")
 as.numeric(colibri_vector)
 ```
 
 Un vector solo tiene una clase. Que pasa cuando hay valores de diferentes tipos en el mismo vector? Pega `colibri_vector` al vector `o` (manetener el objeto `o`). Cual es la clase del vector nuevo? Conviertelo al tipo numerico. Que pasa con los caracteres? 
 
 ```{r}
-class(colibri_vector)
-class(o)
 o<-c(o, colibri_vector)
 class(o)
-o
+as.numeric(o)
 ```
 
 La jerarquia de clases es una de las cosas supremamente fastidiosas en R. 
@@ -216,12 +203,13 @@ Algo para memorizar es el viejo truco de convertir clases de algo al numerical c
 
 ```{r}
 colibri_masa<-as.factor(as.vector(as.factor(c(6.7, 6.98, 6.72, 6.1,6.49,"", 6.64,7.29,7.39,6.9))))
+class(colibri_masa)
 colibri_masa<-as.numeric(as.character(colibri_masa))
 ```
 
 Entre las clases de `numeric`, `logical` y `character`, cual es orden jerarquico?
 
-```{r, eval=F}
+```{r}
 class(c("cual", 0, 0, TRUE, 1238, "es"))
 class(c("cual", 0, 0, "el", 1238, "es"))
 class(c(FALSE, 0, 0, T, 1238, "T"))
@@ -231,15 +219,16 @@ class(c(FALSE, 0, 0, TRUE, 1238, FALSE))
 class(c(FALSE, 0, 0, TRUE, 1238, FALSE))
 class(c(FALSE, 0, 0, 1, TRUE))
 class(c(T, FALSE, "TRUE"))
+#character > numeric > logical
 ```
 
-character > numeric > logicos
+
 
 Ahora vimos como R intrepreta valores ausentes, con `NA`. Muchas problemas en R tienen que ver con la presencia de `NA`.
 
 Calcula el promedio de la masa corporal de los colibris. Pista: En la consola `??nombredeunafuncion` te abre la pantalla de ayuda para una funcion. 
 ```{r}
-mean(colibri_masa, na.rm=TRUE)
+mean(colibri_masa, na.rm = T)
 ```
 
 No todas las funciones son tan capaz como `mean()`. Por eso toca que conocer el proceso de excluir valores ausentes a mano. Asi aprendemos de indices. Indices sirven para referirse a posiciones especificos de objetos. Para usar indices, usamos `[]` directamente despues del nombre de un objeto y colocamos vectores de posiciones dentro de las corchetes.
@@ -273,38 +262,44 @@ colibri_masa[ind_log]
 
 Cual posicion en el vector `colibri_masa` tiene el valor ausente? Construye manualmente un vector logico que excluye el valor ausente, y usalo llamando el vector.
 ```{r}
-colibri_masa
-
+colibri_masa[c(T, T, T, T, T, F, T, T, T, T)]
 ```
 Compara lo que hiciste con lo que arroja la funcion `is.na()`
-```{r, eval=F}
+```{r}
 is.na(colibri_masa)
 ```
 
 Con `!` puedes negar valores logicos. Por ejemplo`!c(T, F, T)`. Usa `!` y `is.na()` para selecionar los valores de masa que no son ausentes.
 ```{r}
+colibri_masa[!is.na(colibri_masa)]
 ```
 
 La funcion `which()` construye vectores numericos (indices) usando tests logicos. Un ejemplo de un test logico:
 
-```{r, eval=FALSE}
+```{r}
 colibri_masa>6.7
 ```
 
 `which(test_logico)` te dice en cuales posiciones salio el test como `TRUE`. Usa `which()` como indice para llamar los elementos de la masa que pesan mayor de 6.7.
 ```{r}
+which(colibri_masa>6.7)
+colibri_masa[which(colibri_masa>6.7)]
 ```
 
 Cuales son los especies que pesan mayor de 6.7, exluyendo los ausentes? Pista: `is.na()`
 ```{r}
+colibri_vector[which(colibri_masa[!is.na(colibri_masa)]>6.7)]
 ```
 
 Cuantos pesan menor q 6.5?
 ```{r}
+length(which(colibri_masa<6.5))
 ```
 
 Con `round()` se puede redondear valores. Cuantos valores de masa, redondeados a 1 digito, son igual a 7? Tests de igualdad se hace con `==`
 ```{r}
+colibri_masa_rd<-round(colibri_masa)
+length(which(colibri_masa_rd==7))
 ```
 
 Por la mayoria no tenemos datos en vectores, sino que en matrices o `data.frames`. Matrices sirven cuando uno tiene exclusivamente datos numericos y uno quiere multiplicarlos. `data.frames` aguantan datos heterogeneos de diferentes clases. Pero tienen que tener `N` filas y `c` columnas. 
@@ -322,21 +317,27 @@ Que pasa si olvidas de excluir el valor ausente en solo una variable?
 Usando `structure`, compara la matriz al data.frame.
 
 ```{r}
+str(c_mat)
+str(c_df)
 ```
 
 `data.frames` tienen elementos nombrados (introducido con `$`). Usa `names()`, con la matriz y el data.frame.
 ```{r}
+names(c_mat)
+names(c_df)
 ```
 
 Para obtener solamente una columna nombrada puedes usar el `$` como `data.frame$columna`. Saca la columna de especies del data.frame.
 ```{r}
+c_df$especie
 ```
 El `$` sirve tambien para definir nuevas columnas. Convierte la columna de las especies al caracter, y coloca el vector tipo caracter alli con el nombre `especie_caracter`.
 Por ejemplo, el siguiente coloca un vector de 1 hasta 9 en una nueva columna llamado "numero"
-```{r, eval=F}
+```{r}
 c_df$numero<-1:9
 ```
 ```{r}
+c_df$especie_caracter<-as.character(c_df$especie)
 ```
 
 Ultimo para ahora: test de igualdad con varios valores. El operador `%in%` en por ejemplo `x %in% y` te arroja un vector logico de la longitud de `x` que dice si el elemento de `x` esta presente en `y`.
@@ -346,24 +347,28 @@ Si por ejemplo quieres selecionar solamente los valores de la masa que correspon
 c_df$especie_caracter %in% c("Coeligena prunellei", "Coeligena torquata")
 ```
 ```{r}
+c_df$masa[c_df$especie_caracter %in% c("Coeligena prunellei", "Coeligena torquata")]
 ```
 
-Usando colchetes con tablas (matrices o data.frames) requiere dos argumentos porque son basicamente vectores en dos dimensiones. Con la funcion `dim()` puedes ver las dimensiones de un objeto. 
-```{r, eval=F}
+Usando colcetes con tablas (matrices o data.frames) requiere dos argumentos porque son basicamente vectores en dos dimensiones. Con la funcion `dim()` puedes ver las dimensiones de un objeto. 
+```{r}
 dim(c_df)
 ```
 Si quieres arrojar el valor de fila numero 6 en columna numero 2, coloca 2 indices, separados con coma.
-```{r, eval=F}
+```{r}
 c_df[6,2]
 ```
 Que pasa cuando quites el indice de la fila, dejando el coma?
 ```{r}
+c_df[6,]
 ```
 Que pasa cuando quites el indice de la columna, dejando el coma?
 ```{r}
+c_df[,2]
 ```
 
 Usando colchetes al data.frame y `%in%`, arroja las filas enteras que corresponden a "Coeligena prunellei" y "Coeligena torquata".
 
 ```{r}
+c_df[c_df$especie_caracter %in% c("Coeligena prunellei", "Coeligena torquata"),]
 ```
