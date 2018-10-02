@@ -273,16 +273,20 @@ colibri_masa[ind_log]
 
 Cual posicion en el vector `colibri_masa` tiene el valor ausente? Construye manualmente un vector logico que excluye el valor ausente, y usalo llamando el vector.
 ```{r}
-colibri_masa
 
+ind_log<-
+colibri_masa[]
 ```
 Compara lo que hiciste con lo que arroja la funcion `is.na()`
 ```{r, eval=F}
-is.na(colibri_masa)
+colibri_masa[is.na(colibri_masa)]
+
 ```
 
 Con `!` puedes negar valores logicos. Por ejemplo`!c(T, F, T)`. Usa `!` y `is.na()` para selecionar los valores de masa que no son ausentes.
 ```{r}
+!c(T, F, T)
+colibri_masa[!is.na(colibri_masa)]
 ```
 
 La funcion `which()` construye vectores numericos (indices) usando tests logicos. Un ejemplo de un test logico:
@@ -293,18 +297,24 @@ colibri_masa>6.7
 
 `which(test_logico)` te dice en cuales posiciones salio el test como `TRUE`. Usa `which()` como indice para llamar los elementos de la masa que pesan mayor de 6.7.
 ```{r}
+colibri_masa<-colibri_masa[!is.na(colibri_masa)]
+colibri_vector[which(colibri_masa>6.7)]
 ```
 
 Cuales son los especies que pesan mayor de 6.7, exluyendo los ausentes? Pista: `is.na()`
 ```{r}
+colibri_masa[which(colibri_masa>6.7)]
+colibri_vector[which(colibri_masa>6.7)]
 ```
 
 Cuantos pesan menor q 6.5?
 ```{r}
+colibri_vector[which(colibri_masa<6.5)]
 ```
 
 Con `round()` se puede redondear valores. Cuantos valores de masa, redondeados a 1 digito, son igual a 7? Tests de igualdad se hace con `==`
 ```{r}
+colibri_vector[round(colibri_masa)==7]
 ```
 
 Por la mayoria no tenemos datos en vectores, sino que en matrices o `data.frames`. Matrices sirven cuando uno tiene exclusivamente datos numericos y uno quiere multiplicarlos. `data.frames` aguantan datos heterogeneos de diferentes clases. Pero tienen que tener `N` filas y `c` columnas. 
@@ -315,26 +325,29 @@ c_df<-data.frame("especie"=colibri_vector,
                  "masa"=colibri_masa[!is.na(colibri_masa)])
 ```
 
-Que pasa si olvidas de excluir el valor ausente en solo una variable?
-```{r}
-```
-
 Usando `structure`, compara la matriz al data.frame.
 
 ```{r}
+
+str(c_df)
+str(c_mat)
 ```
 
 `data.frames` tienen elementos nombrados (introducido con `$`). Usa `names()`, con la matriz y el data.frame.
 ```{r}
+names(c_df)
+names(c_mat)
 ```
 
 Para obtener solamente una columna nombrada puedes usar el `$` como `data.frame$columna`. Saca la columna de especies del data.frame.
 ```{r}
+c_df$especie
 ```
 El `$` sirve tambien para definir nuevas columnas. Convierte la columna de las especies al caracter, y coloca el vector tipo caracter alli con el nombre `especie_caracter`.
-Por ejemplo, el siguiente coloca un vector de 1 hasta 9 en una nueva columna llamado "numero"
+Por ejemplo, el siguiente coloca un vector de 1 hasta 9 en una nueva columna llamado "numero_noseque"
+
 ```{r, eval=F}
-c_df$numero<-1:9
+c_df$numero_noseque<-1:9
 ```
 ```{r}
 ```
@@ -344,8 +357,11 @@ Ultimo para ahora: test de igualdad con varios valores. El operador `%in%` en po
 Si por ejemplo quieres selecionar solamente los valores de la masa que corresponden a "Coeligena prunellei" y "Coeligena torquata" puedes usar el `%in%`. Usa el siguiente para obtener los correspondientes valores de masa.
 ```{r}
 c_df$especie_caracter %in% c("Coeligena prunellei", "Coeligena torquata")
+c_df$masa[c_df$especie_caracter %in% c("Coeligena prunellei", "Coeligena torquata"),]
 ```
 ```{r}
+c_df$especie_caracter<-as.character(c_df$especie)
+c_df$especie_caracter %in% c("Coeligena prunellei", "Coeligena torquata")
 ```
 
 Usando colchetes con tablas (matrices o data.frames) requiere dos argumentos porque son basicamente vectores en dos dimensiones. Con la funcion `dim()` puedes ver las dimensiones de un objeto. 
@@ -354,16 +370,18 @@ dim(c_df)
 ```
 Si quieres arrojar el valor de fila numero 6 en columna numero 2, coloca 2 indices, separados con coma.
 ```{r, eval=F}
-c_df[6,2]
 ```
 Que pasa cuando quites el indice de la fila, dejando el coma?
 ```{r}
+
 ```
 Que pasa cuando quites el indice de la columna, dejando el coma?
 ```{r}
+
 ```
 
 Usando colchetes al data.frame y `%in%`, arroja las filas enteras que corresponden a "Coeligena prunellei" y "Coeligena torquata".
 
 ```{r}
+
 ```
